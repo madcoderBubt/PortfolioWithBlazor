@@ -1,0 +1,105 @@
+@page "/portfolio"
+@using PortfolioDotNet.Services
+@using PortfolioDotNet.Models
+@inject PortfolioDataService DataService
+
+<PageTitle>Portfolio - Projects Showcase</PageTitle>
+
+<div class="page-header">
+    <h1 class="page-title">Portfolio</h1>
+    <p class="page-subtitle">Showcase of my work</p>
+</div>
+
+<section class="portfolio-section">
+    <div class="container">
+        <div class="filter-buttons">
+            <button class="filter-btn @(selectedCategory == "All" ? "active" : "")" 
+                    @onclick="@(() => FilterProjects("All"))">
+                All Projects
+            </button>
+            <button class="filter-btn @(selectedCategory == "Web" ? "active" : "")" 
+                    @onclick="@(() => FilterProjects("Web"))">
+                Web
+            </button>
+            <button class="filter-btn @(selectedCategory == "Desktop" ? "active" : "")" 
+                    @onclick="@(() => FilterProjects("Desktop"))">
+                Desktop
+            </button>
+        </div>
+
+        <div class="projects-grid">
+            @foreach (var project in filteredProjects)
+            {
+                <div class="project-card">
+                    <div class="project-image">
+                        @*<img src="@project.ImageUrl" alt="@project.Title" class="project-image">*@
+                        <i class="fas fa-laptop-code project-placeholder-icon"></i>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                @if (!string.IsNullOrEmpty(project.LiveLink))
+                                {
+                                    <a href="@project.LiveLink" target="_blank" class="project-link" title="View Live">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                }
+                                @if (!string.IsNullOrEmpty(project.RepoLink))
+                                {
+                                    <a href="@project.RepoLink" target="_blank" class="project-link" title="View Code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>@project.Title</h3>
+                            <span class="project-status status-@project.Status.ToLower()">@project.Status</span>
+                        </div>
+                        <p class="project-description">@project.Description</p>
+                        <div class="project-tech">
+                            @foreach (var tech in project.Technologies)
+                            {
+                                <span class="tech-badge">@tech</span>
+                            }
+                        </div>
+                        <div class="project-footer">
+                            <span class="project-team">
+                                <i class="fas fa-users"></i> @project.Team
+                            </span>
+                            <span class="project-category">
+                                <i class="fas fa-tag"></i> @project.Category
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+        @if (!filteredProjects.Any())
+        {
+            <div class="no-projects">
+                <i class="fas fa-folder-open"></i>
+                <p>No projects found in this category</p>
+            </div>
+        }
+    </div>
+</section>
+
+@code {
+    private List<Project> allProjects = new();
+    private List<Project> filteredProjects = new();
+    private string selectedCategory = "All";
+
+    protected override async Task OnInitializedAsync()
+    {
+        allProjects = await DataService.GetProjectsAsync();
+        filteredProjects = allProjects;
+    }
+
+    private async Task FilterProjects(string category)
+    {
+        selectedCategory = category;
+        filteredProjects = await DataService.GetProjectsByCategoryAsync(category);
+    }
+}

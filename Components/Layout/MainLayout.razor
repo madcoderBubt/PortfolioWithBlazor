@@ -1,0 +1,147 @@
+﻿@inherits LayoutComponentBase
+@using PortfolioDotNet.Services
+@inject ThemeService ThemeService
+@inject IJSRuntime JS
+@implements IDisposable
+@inject ILogger<MainLayout> Logger
+
+<div class="page @ThemeService.CurrentTheme">
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <span class="logo-text">&lt;MadCoder /&gt;</span>
+                </a>
+                
+                <nav class="main-nav">
+                    <NavLink href="/" Match="NavLinkMatch.All">Home</NavLink>
+                    <NavLink href="/services">Services</NavLink>
+                    <NavLink href="/resume">Resume</NavLink>
+                    <NavLink href="/portfolio">Portfolio</NavLink>
+                    <NavLink href="/projects">Projects</NavLink>
+                    <NavLink href="/contact">Contact</NavLink>
+                </nav>
+
+                <div class="header-actions">
+                    <button type="button" class="theme-toggle" @onclick="ToggleTheme" title="Toggle Theme">
+                        @if (ThemeService.IsDarkMode)
+                        {
+                            <i class="fas fa-sun"></i>
+                        }
+                        else
+                        {
+                            <i class="fas fa-moon"></i>
+                        }
+                    </button>
+                    <button type="button" class="mobile-menu-toggle" @onclick="ToggleMobileMenu">
+                        <i class="fas @(mobileMenuOpen ? "fa-times" : "fa-bars")"></i>
+                    </button>
+                </div>
+            </div>
+
+            @if (mobileMenuOpen)
+            {
+                <nav class="mobile-nav">
+                    <NavLink href="/" Match="NavLinkMatch.All" @onclick="CloseMobileMenu">Home</NavLink>
+                    <NavLink href="/services" @onclick="CloseMobileMenu">Services</NavLink>
+                    <NavLink href="/resume" @onclick="CloseMobileMenu">Resume</NavLink>
+                    <NavLink href="/portfolio" @onclick="CloseMobileMenu">Portfolio</NavLink>
+                    <NavLink href="/projects" @onclick="CloseMobileMenu">Projects</NavLink>
+                    <NavLink href="/contact" @onclick="CloseMobileMenu">Contact</NavLink>
+                </nav>
+            }
+        </div>
+    </header>
+
+    <main class="main-content">
+        @Body
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; @DateTime.Now.Year Portfolio. Built with Blazor & .NET</p>
+                <div class="footer-links">
+                    <a href="https://github.com/MadCoderBubt" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/MadCoderbubt" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+@code {
+    private bool mobileMenuOpen = false;
+
+    protected override void OnInitialized()
+    {
+        ThemeService.OnThemeChanged += OnThemeChanged;
+    }
+
+    private void ToggleTheme()
+    {
+        Logger.LogInformation("Toggling theme...");
+        ThemeService.ToggleTheme();
+    }
+
+    private void OnThemeChanged()
+    {
+        StateHasChanged();
+        _ = UpdateBodyAndStoreAsync();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            try
+            {
+                var stored = await JS.InvokeAsync<string>("themeInterop.getStoredTheme");
+                if (!string.IsNullOrWhiteSpace(stored))
+                {
+                    ThemeService.SetTheme(stored);
+                }
+            }
+            catch
+            {
+                // ignore failures (e.g., server prerender)
+            }
+
+            await UpdateBodyAndStoreAsync();
+        }
+    }
+
+    private async Task UpdateBodyAndStoreAsync()
+    {
+        try
+        {
+            await JS.InvokeVoidAsync("themeInterop.setBodyTheme", ThemeService.CurrentTheme);
+            await JS.InvokeVoidAsync("themeInterop.setStoredTheme", ThemeService.CurrentTheme);
+        }
+        catch
+        {
+            // ignore JS errors during prerender/server-side contexts
+        }
+    }
+
+    private void ToggleMobileMenu()
+    {
+        mobileMenuOpen = !mobileMenuOpen;
+    }
+
+    private void CloseMobileMenu()
+    {
+        mobileMenuOpen = false;
+    }
+
+    public void Dispose()
+    {
+        ThemeService.OnThemeChanged -= OnThemeChanged;
+    }
+}
+
+<script src="/js/themeInterop.js"></script>

@@ -1,0 +1,27 @@
+@page "/"
+@namespace PortfolioDotNet.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using Microsoft.AspNetCore.Components.Web
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="~/" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="pages.css" />
+    <link rel="stylesheet" href="PortfolioDotNet.styles.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
+</head>
+<body>
+    <component type="typeof(PortfolioDotNet.Components.App)" render-mode="ServerPrerendered" />
+
+    <script src="_framework/blazor.server.js"></script>
+</body>
+</html>

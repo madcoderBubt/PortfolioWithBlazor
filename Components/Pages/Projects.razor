@@ -1,0 +1,99 @@
+@page "/projects"
+@using PortfolioDotNet.Services
+@using PortfolioDotNet.Models
+@inject PortfolioDataService DataService
+
+<PageTitle>Projects - Detailed View</PageTitle>
+
+<div class="page-header">
+    <h1 class="page-title">Projects</h1>
+    <p class="page-subtitle">Detailed overview of my work</p>
+</div>
+
+<section class="projects-detail-section">
+    <div class="container">
+        @foreach (var project in projects)
+        {
+            <div class="project-detail-card">
+                <div class="project-detail-header">
+                    <div>
+                        <h2>@project.Title</h2>
+                        <div class="project-meta">
+                            <span class="badge badge-category">@project.Category</span>
+                            <span class="badge badge-status status-@project.Status.ToLower()">@project.Status</span>
+                            <span class="badge badge-team">
+                                <i class="fas fa-users"></i> @project.Team
+                            </span>
+                        </div>
+                    </div>
+                    <div class="project-actions">
+                        @if (!string.IsNullOrEmpty(project.LiveLink))
+                        {
+                            <a href="@project.LiveLink" target="_blank" class="btn btn-sm btn-primary">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        }
+                        @if (!string.IsNullOrEmpty(project.RepoLink))
+                        {
+                            <a href="@project.RepoLink" target="_blank" class="btn btn-sm btn-secondary">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        }
+                    </div>
+                </div>
+
+                <div class="project-detail-body">
+                    <div class="project-description-section">
+                        <h3><i class="fas fa-info-circle"></i> Description</h3>
+                        <p>@project.Description</p>
+                    </div>
+
+                    <div class="project-tech-section">
+                        <h3><i class="fas fa-tools"></i> Technologies Used</h3>
+                        <div class="tech-stack">
+                            @foreach (var tech in project.Technologies)
+                            {
+                                <div class="tech-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>@tech</span>
+                                </div>
+                            }
+                        </div>
+                    </div>
+
+                    @if (!string.IsNullOrEmpty(project.RepoLink) || !string.IsNullOrEmpty(project.LiveLink))
+                    {
+                        <div class="project-links-section">
+                            <h3><i class="fas fa-link"></i> Links</h3>
+                            <div class="links-grid">
+                                @if (!string.IsNullOrEmpty(project.RepoLink))
+                                {
+                                    <a href="@project.RepoLink" target="_blank" class="link-card">
+                                        <i class="fab fa-github"></i>
+                                        <span>Source Code</span>
+                                    </a>
+                                }
+                                @if (!string.IsNullOrEmpty(project.LiveLink))
+                                {
+                                    <a href="@project.LiveLink" target="_blank" class="link-card">
+                                        <i class="fas fa-globe"></i>
+                                        <span>Live Demo</span>
+                                    </a>
+                                }
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+</section>
+
+@code {
+    private List<Project> projects = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        projects = await DataService.GetProjectsAsync();
+    }
+}

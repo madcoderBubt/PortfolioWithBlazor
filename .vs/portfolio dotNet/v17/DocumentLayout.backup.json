@@ -1,0 +1,265 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\AI Agent Work\\portfolio dotNet\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{51244CA5-B7D6-F2FA-6726-5B24A95728D4}|PortfolioDotNet.csproj|e:\\ai agent work\\portfolio dotnet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51244CA5-B7D6-F2FA-6726-5B24A95728D4}|PortfolioDotNet.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51244CA5-B7D6-F2FA-6726-5B24A95728D4}|PortfolioDotNet.csproj|e:\\ai agent work\\portfolio dotnet\\portfoliodotnet.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{51244CA5-B7D6-F2FA-6726-5B24A95728D4}|PortfolioDotNet.csproj|solutionrelative:portfoliodotnet.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51244CA5-B7D6-F2FA-6726-5B24A95728D4}|PortfolioDotNet.csproj|e:\\ai agent work\\portfolio dotnet\\components\\pages\\services.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{51244CA5-B7D6-F2FA-6726-5B24A95728D4}|PortfolioDotNet.csproj|solutionrelative:components\\pages\\services.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51244CA5-B7D6-F2FA-6726-5B24A95728D4}|PortfolioDotNet.csproj|e:\\ai agent work\\portfolio dotnet\\components\\pages\\resume.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{51244CA5-B7D6-F2FA-6726-5B24A95728D4}|PortfolioDotNet.csproj|solutionrelative:components\\pages\\resume.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51244CA5-B7D6-F2FA-6726-5B24A95728D4}|PortfolioDotNet.csproj|e:\\ai agent work\\portfolio dotnet\\components\\pages\\projects.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{51244CA5-B7D6-F2FA-6726-5B24A95728D4}|PortfolioDotNet.csproj|solutionrelative:components\\pages\\projects.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51244CA5-B7D6-F2FA-6726-5B24A95728D4}|PortfolioDotNet.csproj|e:\\ai agent work\\portfolio dotnet\\components\\pages\\portfolio.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{51244CA5-B7D6-F2FA-6726-5B24A95728D4}|PortfolioDotNet.csproj|solutionrelative:components\\pages\\portfolio.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51244CA5-B7D6-F2FA-6726-5B24A95728D4}|PortfolioDotNet.csproj|e:\\ai agent work\\portfolio dotnet\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{51244CA5-B7D6-F2FA-6726-5B24A95728D4}|PortfolioDotNet.csproj|solutionrelative:components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51244CA5-B7D6-F2FA-6726-5B24A95728D4}|PortfolioDotNet.csproj|e:\\ai agent work\\portfolio dotnet\\components\\pages\\error.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{51244CA5-B7D6-F2FA-6726-5B24A95728D4}|PortfolioDotNet.csproj|solutionrelative:components\\pages\\error.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51244CA5-B7D6-F2FA-6726-5B24A95728D4}|PortfolioDotNet.csproj|e:\\ai agent work\\portfolio dotnet\\components\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{51244CA5-B7D6-F2FA-6726-5B24A95728D4}|PortfolioDotNet.csproj|solutionrelative:components\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51244CA5-B7D6-F2FA-6726-5B24A95728D4}|PortfolioDotNet.csproj|e:\\ai agent work\\portfolio dotnet\\components\\pages\\contact.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{51244CA5-B7D6-F2FA-6726-5B24A95728D4}|PortfolioDotNet.csproj|solutionrelative:components\\pages\\contact.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51244CA5-B7D6-F2FA-6726-5B24A95728D4}|PortfolioDotNet.csproj|e:\\ai agent work\\portfolio dotnet\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{51244CA5-B7D6-F2FA-6726-5B24A95728D4}|PortfolioDotNet.csproj|solutionrelative:components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51244CA5-B7D6-F2FA-6726-5B24A95728D4}|PortfolioDotNet.csproj|e:\\ai agent work\\portfolio dotnet\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{51244CA5-B7D6-F2FA-6726-5B24A95728D4}|PortfolioDotNet.csproj|solutionrelative:components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51244CA5-B7D6-F2FA-6726-5B24A95728D4}|PortfolioDotNet.csproj|e:\\ai agent work\\portfolio dotnet\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{51244CA5-B7D6-F2FA-6726-5B24A95728D4}|PortfolioDotNet.csproj|solutionrelative:components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51244CA5-B7D6-F2FA-6726-5B24A95728D4}|PortfolioDotNet.csproj|e:\\ai agent work\\portfolio dotnet\\services\\themeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51244CA5-B7D6-F2FA-6726-5B24A95728D4}|PortfolioDotNet.csproj|solutionrelative:services\\themeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\AI Agent Work\\portfolio dotNet\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\AI Agent Work\\portfolio dotNet\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABAAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T17:13:58.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Services.razor",
+              "DocumentMoniker": "E:\\AI Agent Work\\portfolio dotNet\\Components\\Pages\\Services.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Services.razor",
+              "ToolTip": "E:\\AI Agent Work\\portfolio dotNet\\Components\\Pages\\Services.razor",
+              "RelativeToolTip": "Components\\Pages\\Services.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-02T17:13:29.585Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Resume.razor",
+              "DocumentMoniker": "E:\\AI Agent Work\\portfolio dotNet\\Components\\Pages\\Resume.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Resume.razor",
+              "ToolTip": "E:\\AI Agent Work\\portfolio dotNet\\Components\\Pages\\Resume.razor",
+              "RelativeToolTip": "Components\\Pages\\Resume.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-02T17:13:23.271Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Projects.razor",
+              "DocumentMoniker": "E:\\AI Agent Work\\portfolio dotNet\\Components\\Pages\\Projects.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Projects.razor",
+              "ToolTip": "E:\\AI Agent Work\\portfolio dotNet\\Components\\Pages\\Projects.razor",
+              "RelativeToolTip": "Components\\Pages\\Projects.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-02T17:13:19.302Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Portfolio.razor",
+              "DocumentMoniker": "E:\\AI Agent Work\\portfolio dotNet\\Components\\Pages\\Portfolio.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Portfolio.razor",
+              "ToolTip": "E:\\AI Agent Work\\portfolio dotNet\\Components\\Pages\\Portfolio.razor",
+              "RelativeToolTip": "Components\\Pages\\Portfolio.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-02T17:13:15.118Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Home.razor",
+              "DocumentMoniker": "E:\\AI Agent Work\\portfolio dotNet\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Home.razor",
+              "ToolTip": "E:\\AI Agent Work\\portfolio dotNet\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "Components\\Pages\\Home.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-02T17:13:10.354Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Error.razor",
+              "DocumentMoniker": "E:\\AI Agent Work\\portfolio dotNet\\Components\\Pages\\Error.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Error.razor",
+              "ToolTip": "E:\\AI Agent Work\\portfolio dotNet\\Components\\Pages\\Error.razor",
+              "RelativeToolTip": "Components\\Pages\\Error.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-02T17:13:07.654Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Counter.razor",
+              "DocumentMoniker": "E:\\AI Agent Work\\portfolio dotNet\\Components\\Pages\\Counter.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Counter.razor",
+              "ToolTip": "E:\\AI Agent Work\\portfolio dotNet\\Components\\Pages\\Counter.razor",
+              "RelativeToolTip": "Components\\Pages\\Counter.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-02T17:13:04.201Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Contact.razor",
+              "DocumentMoniker": "E:\\AI Agent Work\\portfolio dotNet\\Components\\Pages\\Contact.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Contact.razor",
+              "ToolTip": "E:\\AI Agent Work\\portfolio dotNet\\Components\\Pages\\Contact.razor",
+              "RelativeToolTip": "Components\\Pages\\Contact.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-02T17:12:35.505Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "E:\\AI Agent Work\\portfolio dotNet\\Components\\_Imports.razor",
+              "RelativeDocumentMoniker": "Components\\_Imports.razor",
+              "ToolTip": "E:\\AI Agent Work\\portfolio dotNet\\Components\\_Imports.razor",
+              "RelativeToolTip": "Components\\_Imports.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-02T17:11:04.227Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PortfolioDotNet",
+              "DocumentMoniker": "E:\\AI Agent Work\\portfolio dotNet\\PortfolioDotNet.csproj",
+              "RelativeDocumentMoniker": "PortfolioDotNet.csproj",
+              "ToolTip": "E:\\AI Agent Work\\portfolio dotNet\\PortfolioDotNet.csproj",
+              "RelativeToolTip": "PortfolioDotNet.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-02T17:09:57.226Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "App.razor",
+              "DocumentMoniker": "E:\\AI Agent Work\\portfolio dotNet\\Components\\App.razor",
+              "RelativeDocumentMoniker": "Components\\App.razor",
+              "ToolTip": "E:\\AI Agent Work\\portfolio dotNet\\Components\\App.razor",
+              "RelativeToolTip": "Components\\App.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-02T16:48:41.848Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "E:\\AI Agent Work\\portfolio dotNet\\Components\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "Components\\Layout\\MainLayout.razor",
+              "ToolTip": "E:\\AI Agent Work\\portfolio dotNet\\Components\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "Components\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFQAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-02T16:36:11.204Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ThemeService.cs",
+              "DocumentMoniker": "E:\\AI Agent Work\\portfolio dotNet\\Services\\ThemeService.cs",
+              "RelativeDocumentMoniker": "Services\\ThemeService.cs",
+              "ToolTip": "E:\\AI Agent Work\\portfolio dotNet\\Services\\ThemeService.cs",
+              "RelativeToolTip": "Services\\ThemeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T16:35:54.989Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

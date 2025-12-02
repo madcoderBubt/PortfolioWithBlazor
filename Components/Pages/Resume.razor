@@ -1,0 +1,147 @@
+@page "/resume"
+@using PortfolioDotNet.Services
+@using PortfolioDotNet.Models
+@inject PortfolioDataService DataService
+<PageTitle>Resume - Portfolio</PageTitle>
+
+<div class="page-header">
+    <h1 class="page-title">Resume</h1>
+    <p class="page-subtitle">My professional journey</p>
+</div>
+
+<section class="resume-section">
+    <div class="container">
+        <div class="resume-grid">
+            <!-- Skills Section -->
+            <div class="resume-column">
+                <h2 class="section-title">
+                    <i class="fas fa-code"></i> Skills & Technologies
+                </h2>
+                
+                @foreach (var category in skills.GroupBy(s => s.Category))
+                {
+                    <div class="skill-category">
+                        <h3>@category.Key</h3>
+                        <div class="skills-list">
+                            @foreach (var skill in category)
+                            {
+                                <a href="@skill.Link" target="_blank" class="skill-tag" title="@skill.Name Documentation">
+                                    @skill.Name
+                                </a>
+                            }
+                        </div>
+                    </div>
+                }
+
+                <h2 class="section-title mt-4">
+                    <i class="fas fa-lightbulb"></i> Core Abilities
+                </h2>
+                <div class="abilities-list">
+                    @foreach (var ability in portfolioData.Abilities)
+                    {
+                        <div class="ability-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>@ability</span>
+                        </div>
+                    }
+                </div>
+
+                <h2 class="section-title mt-4">
+                    <i class="fas fa-language"></i> Languages
+                </h2>
+                <div class="languages-list">
+                    @foreach (var language in portfolioData.Languages)
+                    {
+                        <div class="language-item">
+                            <span class="language-name">@language.Name</span>
+                            <span class="language-level">@language.Level</span>
+                        </div>
+                    }
+                </div>
+            </div>
+
+            <!-- Experience & Education Section -->
+            <div class="resume-column">
+                <h2 class="section-title">
+                    <i class="fas fa-briefcase"></i> Work Experience
+                </h2>
+                <div class="timeline">
+                    @foreach (var exp in experience)
+                    {
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">@exp.Date</div>
+                                <h3>@exp.Role</h3>
+                                <h4>@exp.Company</h4>
+                                <p class="location">
+                                    <i class="fas fa-map-marker-alt"></i> @exp.Location
+                                </p>
+                                <p class="description">@exp.Description</p>
+                                <div class="skills-used">
+                                    <strong>Technologies:</strong> @exp.Skills
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+
+                <h2 class="section-title mt-4">
+                    <i class="fas fa-graduation-cap"></i> Education
+                </h2>
+                <div class="timeline">
+                    @foreach (var edu in education)
+                    {
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">@edu.Year</div>
+                                <h3>@edu.Degree</h3>
+                                <h4>@edu.Institution</h4>
+                                <p class="location">
+                                    <i class="fas fa-map-marker-alt"></i> @edu.Location
+                                </p>
+                            </div>
+                        </div>
+                    }
+                </div>
+
+                @if (portfolioData.ExtraActivities.Any())
+                {
+                    <h2 class="section-title mt-4">
+                        <i class="fas fa-star"></i> Extra Activities
+                    </h2>
+                    <ul class="activities-list">
+                        @foreach (var activity in portfolioData.ExtraActivities)
+                        {
+                            <li>@activity</li>
+                        }
+                    </ul>
+                }
+            </div>
+        </div>
+
+        <div class="resume-download">
+            <a href="@profile.CvLink" target="_blank" class="btn btn-primary">
+                <i class="fas fa-download"></i> Download Full Resume
+            </a>
+        </div>
+    </div>
+</section>
+
+@code {
+    private Profile profile = new();
+    private PortfolioData portfolioData = new();
+    private List<Skill> skills = new();
+    private List<Experience> experience = new();
+    private List<Education> education = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        portfolioData = await DataService.GetPortfolioDataAsync();
+        profile = portfolioData.Profile;
+        skills = portfolioData.Skills;
+        experience = portfolioData.Experience;
+        education = portfolioData.Education;
+    }
+}
